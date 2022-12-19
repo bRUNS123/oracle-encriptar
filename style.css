@@ -1,0 +1,200 @@
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.5fr 0.9fr;
+  grid-template-rows: 0.5fr 1.5fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  flex-wrap: wrap;
+  grid-template-areas:
+    "Logo Header Response"
+    "Sidebar InputTexto Response"
+    "Sidebar Button Response";
+}
+
+body {
+  background-color: #d8d8d8;
+}
+
+.Logo {
+  grid-area: Logo;
+  margin: 50px 100px;
+}
+
+.Header {
+  grid-area: Header;
+}
+
+.InputTexto {
+  grid-area: InputTexto;
+}
+.input-texto {
+  padding: 5px;
+  resize: none;
+  background-color: #d8d8d8;
+}
+::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+.Response {
+  grid-area: Response;
+  position: relative;
+  text-align-last: center;
+}
+
+.TextoRes {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  font-size: 10px;
+}
+.textoResponse_sub {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 120px;
+}
+
+.mensaje {
+  margin-top: 30px;
+  padding: 5px;
+  background-image: url("../img/joven.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px;
+  resize: none;
+  /* cant write text */
+  pointer-events: none;
+}
+
+.Button {
+  grid-area: Button;
+}
+
+.texto_boton {
+  font-size: 10px;
+}
+
+.encriptar {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #00008b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.encriptar:hover {
+  background-color: #00468b;
+}
+
+.encriptar:active {
+  background-color: #00468b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.encriptar_2 {
+  display: none;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #00008b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.encriptar_2:hover {
+  background-color: #00468b;
+}
+
+.encriptar_2:active {
+  background-color: #00468b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.desencriptar {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #999;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #e9f5f8;
+}
+
+.desencriptar:hover {
+  background-color: #00468b;
+}
+
+.desencriptar:active {
+  background-color: #00468b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.Sidebar {
+  grid-area: Sidebar;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .container {
+    display: -ms-grid;
+    -ms-grid-columns: 0.6fr 1.5fr 0.9fr;
+    -ms-grid-rows: 0.5fr 1.5fr 1fr;
+  }
+
+  .Logo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .Header {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+
+  .Response {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
+  .Input {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+
+  .Button {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+
+  .Sidebar {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+}
